@@ -1,0 +1,46 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin1234
+    url: jdbc:mysql://db-user-manage.cqxpvmjoih5f.us-east-1.rds.amazonaws.com/userManagedb
+    username: admin
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: springjava8@gmail.com
+    password: spring@8
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+app:
+  messages:
+     invalidCredentials:Credentials are invalid
+     accountLocked:your account is locked
+     regSuccess:Registation Completed.Pls check your email for further
+     unlockSucc:your account locked successfully
+     unlockFail:Fail to unlock account
+     regEmailSub:User Registartion Successful | AkshIT
+     forgotPwdEmailSub:Forgot Password | AkshIt
+     forgotPassSucc:Email sent with password
+     forgotPassFail:Enter correct Email Id
+     regMailBodyFile:Unlock-Account-Email-Body-Template.txt
+     forgotPwdMailBodyFile:Recovery-Password-Email-Body-Template.txt
+      
+         
+   
